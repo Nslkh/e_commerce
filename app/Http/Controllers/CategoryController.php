@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+
+
 
 class CategoryController extends Controller
 {
@@ -39,6 +43,15 @@ class CategoryController extends Controller
             'description'=>'required',
             'image'=>'required|mimes:png,jpeg'
         ]);
+
+        $image = $request->file('image')->store('public/files');
+        Category::create([
+            'name'=>$request->name,
+            'slug'=>Str::slug($request->name),
+            'description'=>$request->description,
+            'image'=>$image
+        ]);
+        return redirect()->back()->with('message','Category created successfuly');
     }
 
     /**
