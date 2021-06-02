@@ -298,7 +298,7 @@
 
     <div class="row">
       <div class="col-lg-12 text-center">
-        <p>Do you like this template ? you can download from <a href="https://github.com/indrijunanda/RuangAdmin"
+        <p>Do you like this website ? you can download from <a href="https://github.com/Nslkh/e_commerce"
             class="btn btn-primary btn-sm" target="_blank"><i class="fab fa-fw fa-github"></i>&nbsp;GitHub</a></p>
       </div>
     </div>
